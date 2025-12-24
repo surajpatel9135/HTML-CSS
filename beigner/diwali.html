@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1,0" />
+    <title>Diwali 3D Image</title>
+
+    <style>
+      :root {
+        --diya-color: #a0522d;
+        --gold-color: #ffd700;
+        --flame-color: #ffed8d;
+        --flame-orange: #ff9900;
+      }
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        min-height: 100vh;
+        background: radial-gradient(circle at center, #2e0c0c 0%, #000000 100%);
+        overflow: hidden;
+        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      .scene {
+        perspective: 1000px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .diya-3d-wrapper {
+        width: 200px;
+        height: 200px;
+        position: relative;
+        transform-style: preserve-3d;
+        transform: rotateX(70deg) rotateZ(10deg);
+      }
+
+      .diya-base,
+      .diya-bottom {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        border-radius: 50%;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+      }
+
+      .diya-base {
+        width: 150px;
+        height: 150px;
+        top: 50%;
+        background: var(--diya-color);
+        transform: translateX(-50%) rotateX(70deg) translate(0);
+        box-shadow: inset 0 10px 15px rgna(0, 0, 0, 0.5),
+          0 10px 20px rgba(0, 0, 0, 0.5);
+      }
+
+      .diya-bottom {
+        width: 10px;
+        height: 30px;
+        background: #362e24;
+        position: absolute;
+        top: 30px;
+        left: calc(50% + 5px);
+        transform: translateX(-50%) rotateX(70deg) translateZ(20px);
+        border-radius: 5px 5px 0 0;
+      }
+
+      .flame-glow {
+        position: absolute;
+        top: 0px;
+        left: calc(50% + 5px);
+        width: 20px;
+        height: 20px;
+        transform: translateX(-50%) rotateX(70deg) translateZ(30px);
+        border-radius: 50%;
+        box-shadow: 0 0 50px 20px var(--flame-orange),
+          0 0 90px 40px var(--flame-yellow);
+        animation: pulse-glow 3s infinite alternate;
+      }
+
+      .flame {
+        width: 100%;
+        height: 100%;
+        background: var(--flame-yellow);
+        border-radius: 50% 50% 50% 50% / 60% 60% 40% 40%;
+        box-shadow: 0 0 5px var(--flame-orange);
+        animation: flicker 0.2s infinite alternate;
+      }
+
+      @keyframes flicker {
+        0% {
+          transform: scaleY(1);
+          opacity: 0.95;
+        }
+        50% {
+          transform: scaleY(1.1);
+          opacity: 1;
+        }
+        100% {
+          transform: scaleY(1.05);
+          opacity: 0.9;
+        }
+      }
+
+      @keyframes pulse-glow {
+        0% {
+          opacity: 0.8;
+        }
+        100% {
+          opacity: 1;
+        }
+      }
+
+      .diwali-text {
+        color: var(--gold-color);
+        font-family: "Times New Roman", Times, serif;
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        margin-top: 50px;
+        text-shadow: 0 0 10px var(--flame-orange), 0 0 20px var(--flame-yellow);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="scene">
+      <div class="diya-3d-wrapper">
+        <div class="diya-base"></div>
+        <div class="diya-bottom"></div>
+        <div class="diya-wick"></div>
+        <div class="flame-glow">
+          <div class="flame"></div>
+        </div>
+      </div>
+      <h1 class="diwali-text">Happy Diwali</h1>
+    </div>
+  </body>
+</html>

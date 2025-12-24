@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Personal Information</title>
+  </head>
+  <body>
+    <h1>Student Registration Form</h1>
+
+    <form action="#" method="post">
+      <label for="name">Full Name: </label>
+      <input
+        type="text"
+        id="name"
+        name="name"
+        placeholder="Enter Your Full Name"
+      /><br /><br />
+
+      <label for="email">Email: </label>
+      <input
+        type="email"
+        id="email"
+        name="email"
+        placeholder="Enter Your Email"
+      /><br /><br />
+
+      <label for="phone">Phone No: </label>
+      <input
+        type="tel"
+        id="phone"
+        name="phone"
+        placeholder="Enter Your Phone No"
+      /><br /><br />
+
+      <label for="password">Password: </label>
+      <input
+        type="password"
+        id="password"
+        name="password"
+        placeholder="Enter Your Password"
+      /><br /><br />
+
+      <label for="gender">Gender</label>
+      <input type="radio" id="male" name="gender" value="male" />male
+      <input
+        type="radio"
+        id="female"
+        name="gender"
+        vakue="female"
+      />female<br /><br />
+
+      <label for="course">Select Course</label>
+      <select id="course" name="course">
+        <option value="none" selected disabled>Course</option>
+        <option value="btech">B.Tech</option>
+        <option value="bca">BCA</option>
+        <option value="bcom">B.COM</option></select
+      ><br /><br />
+
+      <label for="bio">About You</label><br />
+      <textarea
+        id="bio"
+        name="bio"
+        rows="4"
+        cols="40"
+        placeholder="Write About Yourself"
+      ></textarea
+      ><br /><br />
+
+      <button type="submit">Submit</button>
+      <button type="rest">Reset</button>
+    </form>
+    <a href="day3.html" style="margin-right: 10px;">Go Back to Previous Page</a><br>
+    <a href="day5.html" style="margin-right: 10px;">Go to Next Page</a>
+  </body>
+</html>

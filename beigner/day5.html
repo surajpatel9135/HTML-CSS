@@ -1,0 +1,346 @@
+<!-- <!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Portfolio Page</title>
+
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+      }
+
+      header {
+        background-color: #007acc;
+        color: white;
+        padding: 10px 0;
+        text-align: center;
+      }
+
+      nav a {
+        color: white;
+        margin: 0 15px;
+        text-decoration: none;
+        font-weight: bold;
+      }
+
+      nav a:hover {
+        text-decoration: underline;
+      }
+
+      main {
+        padding: 20px;
+        display: flex;
+        flex-direction: space-between;
+        gap: 20px;
+        margin: 20px;
+      }
+
+      section {
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        flex: 1;
+        width: 70%;
+      }
+
+      footer {
+        background-color: #007acc;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+        position: relative;
+        bottom: 0;
+        width: 100%;
+      }
+
+      img {
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      h1, h2 {
+        color: #333;
+      }
+
+      ul {
+        list-style-type: square;
+        padding-left: 20px;
+        margin: 0;
+        line-height: 1.6;
+      }
+
+      article {
+        margin-bottom: 15px;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+        }
+      }
+
+      a {
+        text-decoration: none;
+        color: #007acc;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-top: 20px;
+      }
+
+      
+    </style>
+  </head>
+  <body>
+    <header>
+      <h1>My Portfolio Page</h1>
+      <p>Full Stack Developer | Tech Enthusiast</p>
+
+      <nav>
+        <a href="#home">Home</a> | <a href="#about">About</a> |
+        <a href="#projects">Projects</a> 
+      </nav>
+    </header>
+
+    <main>
+      <section id="home">
+        <h2>Welcome to My Portfolio Page</h2>
+        <article>
+          <p>
+            Hello! I'm Suraj Patel, a Passionate Full Stack Developer. This
+            Portfolio Showcase My Skills, Projects, and Contact Information.
+          </p>
+        </article>
+      </section>
+
+      <section id="about">
+        <h2>About Me</h2>
+        <article>
+          <p>
+            I am Suraj Patel, I am Full Stack Developer to develop Websites and
+            Web Applications Using MERN Stack Technology.
+          </p>
+          <img src="hero.png" alt="Suraj's Photo" width="200" height="200" />
+        </article>
+      </section>
+
+      <section id="projects">
+        <h2>My Projects</h2>
+        <ul>
+          <li>Smart Cooking Assistant</li>
+          <article>
+            <p>
+              Developed a Web Application that Provides A Voice-Based Cooking
+              Assistant for Blind Users that Helps Them Cook Safely and Easily.
+            </p>
+          </article>
+          <li>My Portfolio Page</li>
+        </ul>
+      </section>
+    </main>
+
+    <footer id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: patelsuraj62068@gmail.com</p>
+      <p>Phone No: +91 6207618768</p>
+      <p>&copy 2025 Suraj Patel | All Rights Reserved</p>
+    </footer>
+  </body>
+</html> -->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Suraj Patel - Portfolio Page</title>
+
+    <style>
+      /* ===== General Styling ===== */
+      body {
+        font-family: Arial, sans-serif;
+        margin: 0;
+        padding: 0;
+        background-color: #f4f4f4;
+        color: #333;
+      }
+
+      h1, h2, h3 {
+        color: #007acc;
+        margin: 10px 0;
+      }
+
+      p {
+        line-height: 1.6;
+      }
+
+      a {
+        text-decoration: none;
+        color: #ffffff;
+      }
+
+      a:hover {
+        text-decoration: underline;
+      }
+
+      ul {
+        list-style-type: square;
+        padding-left: 20px;
+        line-height: 1.6;
+      }
+
+      /* ===== Header ===== */
+      header {
+        background-color: #007acc;
+        color: white;
+        text-align: center;
+        padding: 20px 10px;
+      }
+
+      nav a {
+        margin: 0 15px;
+        font-weight: bold;
+      }
+
+      /* ===== Main Layout ===== */
+      main {
+        display: flex;
+        gap: 20px;
+        padding: 20px;
+        flex-wrap: wrap;
+      }
+
+      section {
+        background-color: white;
+        padding: 15px;
+        border-radius: 5px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        flex: 1 1 60%;
+        min-width: 300px;
+      }
+
+      aside {
+        background-color: #7bbdff;
+        padding: 15px;
+        border-radius: 5px;
+        flex: 1 1 30%;
+        min-width: 200px;
+      }
+
+      img {
+        border-radius: 10px;
+        margin-top: 10px;
+      }
+
+      article {
+        margin-bottom: 15px;
+      }
+
+      /* ===== Footer ===== */
+      footer {
+        background-color: #007acc;
+        color: white;
+        text-align: center;
+        padding: 15px 0;
+      }
+
+      /* ===== Responsive ===== */
+      @media (max-width: 768px) {
+        main {
+          flex-direction: column;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <!-- Header -->
+    <header>
+      <h1>Suraj Patel</h1>
+      <p>Full Stack Developer | Tech Enthusiast</p>
+      <nav>
+        <a href="#home">Home</a> |
+        <a href="#about">About</a> |
+        <a href="#projects">Projects</a> |
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
+
+    <!-- Main Content -->
+    <main>
+      <!-- Home Section -->
+      <section id="home">
+        <h2>Welcome to My Portfolio Page</h2>
+        <article>
+          <p>
+            Hello! I'm Suraj Patel, a passionate Full Stack Developer. This
+            portfolio showcases my skills, projects, and contact information.
+          </p>
+        </article>
+      </section>
+
+      <!-- About Section -->
+      <section id="about">
+        <h2>About Me</h2>
+        <article>
+          <p>
+            I am Suraj Patel, a Full Stack Developer learning to create websites
+            and web applications using MERN stack technologies.
+          </p>
+          <img src="hero.png" alt="Suraj's Photo" width="200" height="200" />
+        </article>
+      </section>
+
+      <!-- Projects Section -->
+      <section id="projects">
+        <h2>My Projects</h2>
+        <article>
+          <h3>Smart Cooking Assistant</h3>
+          <p>
+            Developed a web application that provides a voice-based cooking
+            assistant for blind users to help them cook safely and easily.
+          </p>
+        </article>
+        <article>
+          <h3>My Portfolio Page</h3>
+          <p>This web page demonstrates my learning progress in HTML, CSS, and semantic tags.</p>
+        </article>
+      </section>
+
+      <!-- Aside Section -->
+      <aside>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#about">About Me</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </aside>
+    </main>
+
+    <!-- Footer -->
+    <footer id="contact">
+      <h2>Contact Me</h2>
+      <p>Email: patelsuraj62068@gmail.com</p>
+      <p>Phone No: +91 6207618768</p>
+      <p>&copy; 2025 Suraj Patel | All Rights Reserved</p>
+    </footer>
+  </body>
+</html>
+
