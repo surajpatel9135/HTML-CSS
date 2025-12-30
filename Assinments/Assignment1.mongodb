@@ -1,0 +1,99 @@
+//show database 
+show dbs;
+
+//use student database
+use student;
+
+//insert Alice Johnson
+db.employees.insertOne({
+    name: "Alice Johnson",
+    email: "alice.johnson@company.com",
+    age: 28,
+    department: "HR",
+    salary: 65000,
+})
+
+//insert 5 Enginerring employees
+db.employees.insertMany([
+  {name: "Eng1", email: "eng1@company.com", age: 25, department: "Engineering", salary: 70000, performance_score: 4.0},
+  {name: "Eng2", email: "eng2@company.com", age: 28, department: "Engineering", salary: 78000, performance_score: 4.2},
+  {name: "Eng3", email: "eng3@company.com", age: 30, department: "Engineering", salary: 85000, performance_score: 4.8},
+  {name: "Eng4", email: "eng4@company.com", age: 32, department: "Engineering", salary: 92000, performance_score: 4.1},
+  {name: "Eng5", email: "eng5@company.com", age: 35, department: "Engineering", salary: 95000, performance_score: 4.9}
+])
+
+// Update Alice's performance_score
+db.employees.updateOne(
+  {email: "alice.johnson@company.com"},
+  {$set: {performance_score: 4.5}}
+)
+
+// Increment Engineering salaries
+db.employees.updateMany(
+  {department: "Engineering"},
+  {$inc: {salary: 5000}}
+)
+
+// Add project to John (assumes John exists)
+db.employees.updateOne(
+  {name: "John"},
+  {$push: {projects: {name: "Project Gamma", role: "Manager", status: "active"}}}
+)
+
+// Remove Project Beta
+db.employees.updateMany(
+  {},
+  {$pull: {projects: {name: "Project Beta"}}}
+)
+
+// Deactivate low performers
+db.employees.updateMany(
+  {performance_score: {$lt: 3.0}},
+  {$set: {is_active: false}}
+)
+
+// Replace John Smith's address
+db.employees.updateOne(
+  {email: "john.smith@company.com"},
+  {$set: {address: {street: "456 Innovation Ave", city: "Seattle", state: "WA", zip: "98101"}}}
+)
+
+// Delete John Smith
+db.employees.deleteOne({email: "john.smith@company.com"})
+
+// Add phone to Alice
+db.employees.updateOne(
+  {email: "alice.johnson@company.com"},
+  {$push: {phone_numbers: "415-555-0103"}}
+)
+
+// Unset updated_at for HR
+db.employees.updateMany(
+  {department: "HR"},
+  {$unset: {updated_at: ""}}
+)
+
+// Rename salary to annual_salary
+db.employees.updateMany(
+  {},
+  {$rename: {"salary": "annual_salary"}}
+)
+
+// Bonus for top performers
+db.employees.updateMany(
+  {performance_score: {$gt: 4.5}},
+  {$set: {bonus_eligible: true}},
+  {limit: 3}
+)
+
+// Delete address for CA employees
+db.employees.updateMany(
+  {"address.state": "CA"},
+  {$unset: {address: ""}}
+)
+
+// View all documents
+db.employees.find().pretty() 
+
+// Count remaining employees
+db.employees.countDocuments()  
